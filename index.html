@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Dr. DEE'S Healthcare</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .treatment-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .herb-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4ade80;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .logo img{
+            width: 150px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    
+                    <a href="#home" class="ml-2 text-xl font-semibold text-gray-800"> <div class="flex items-center space-x-2    logo">
+                
+                        <img src="images/logo.png" alt="">
+                    </div>  </a>
+                    
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-800 hover:text-green-600">Home</a>
+                    <a href="#about" class="nav-link text-gray-800 hover:text-green-600">About</a>
+                    <a href="#services" class="nav-link text-gray-800 hover:text-green-600">Services</a>
+                    <a href="#testimonials" class="nav-link text-gray-800 hover:text-green-600">Testimonials</a>
+                    <!-- <a href="#contact" class="nav-link text-gray-800 hover:text-green-600">Contact</a> -->
+                    <!-- <a href="#appointment" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition duration-300">Book Appointment</a> -->
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="md:hidden hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-gray-800 hover:text-green-600">Home</a>
+                <a href="#about" class="block py-2 text-gray-800 hover:text-green-600">About</a>
+                <a href="#services" class="block py-2 text-gray-800 hover:text-green-600">Services</a>
+                <a href="#testimonials" class="block py-2 text-gray-800 hover:text-green-600">Testimonials</a>
+                <!-- <a href="#contact" class="block py-2 text-gray-800 hover:text-green-600">Contact</a> -->
+                <!-- <a href="#appointment" class="block mt-2 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition duration-300 text-center">Book Appointment</a> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Suffering from  CEREBRAL, NEUROLOGICAL,  PHYCOLOGICAL or VASCULAR  Related Health Condition?</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Look no further.  The Best Curative Natural Herbal Supplements solution You Are Looking For Is Available  Here</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <!-- <a href="#appointment" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300">Book Consultation</a> -->
+                <a href="https://wa.me/message/7ODTHIGMWN3RP1" class="bg-white hover:bg-gray-100 text-green-600 px-8 py-3 rounded-md text-lg font-medium transition duration-300">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <!-- <h2 class="text-3xl font-bold text-gray-800 mb-6">About Dr. Greenleaf</h2> -->
+                    <p class="text-gray-600 mb-4">🧠 "My Brain Was Failing Me… Until I Tried This All-Natural 2-in-1 Brain Boost Combo"
+                        The Proven Herbal Formula That’s Helping Nigerians Improve Memory, Sleep, Focus & Cognitive Function Without Expensive Drugs or Risky Side Effects</p>
+                    <p class="text-gray-600 mb-4">Tired of Feeling Like Your Brain Is Slipping? <br>
+                        You forget names. <br>
+                        You walk into a room and forget why. <br>
+                        You can’t focus for long. <br>
+                        Your thoughts feel foggy — like you’re moving through molasses. <br>
+                        </p>
+                    <p class="text-gray-600 mb-6">Whether it's stress, stroke recovery, ADHD, anxiety, or memory loss...
+                        Something just isn’t clicking like it used to. <br><br>
+                        
+                        Imagine Waking Up With a Clear Mind, Calm Nerves & Focused Energy… <br>
+                        That’s the reality hundreds of Nigerians are now experiencing thanks to this 2-in-1 Europe-certified formula:</p>
+                    <div class="flex flex-wrap gap-4">
+                        <!-- <div class="flex items-center bg-green-50 px-4 py-2 rounded-full">
+                            <i class="fas fa-graduation-cap text-green-600 mr-2"></i>
+                            <span class="text-gray-700">PhD in Herbal Medicine</span>
+                        </div>
+                        <div class="flex items-center bg-green-50 px-4 py-2 rounded-full">
+                            <i class="fas fa-certificate text-green-600 mr-2"></i>
+                            <span class="text-gray-700">Board Certified</span>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <img src="images/man.jpeg" alt="Dr. Greenleaf" class="rounded-lg shadow-xl w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-green-600 text-white p-4 rounded-lg shadow-lg hidden md:block">
+                        <p class="font-bold">Worry</p>
+                        <p class="text-sm">No More</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">🌿 GABA Extra & GINKGO+ by Dr. Dee’s</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A powerful neuro-support combo that improves brain circulation, balances the nervous system, boosts memory, and restores mental clarity — naturally</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Treatment 1 -->
+                <div class="treatment-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-brain text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Why This Combo Works When Others Don’t</h3>
+                    <p class="text-gray-600 mb-4">
+                        Most brain pills only work on one part of the puzzle.</p>
+                    <p class="text-gray-600 mb-4">
+                        This formula works on both your brain and nervous system at once, using two scientifically-backed ingredients:</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>GABA Extra – Calms the brain, supports better sleep, reduces anxiety, improves speech & neurological repair</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>GINKGO+ (with EGb761 + Ginseng) – Increases brain blood flow, enhances memory, fights tinnitus and brain fog</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Together, they help restore your mental edge — and fast.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Treatment 2 -->
+                <div class="treatment-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-head-side-virus text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">What This Combo Can Help With:</h3>
+                    <!-- <p class="text-gray-600 mb-4">Natural protocols for Parkinson's, Alzheimer's, MS, and neuropathy that support nervous system function.</p> -->
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Stroke Recovery & Brain Injury</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Memory Loss & Forgetfulness</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Autism, ADHD & Learning Disorders</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Anxiety, Stress & Sleep Problems</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Dementia, Alzheimer's & Cognitive Decline</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Depression, Headaches, and Brain Fog</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Tinnitus (Ear Ringing), Dizziness, and Fatigue</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Poor Libido, Blood Pressure & Circulation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Birth Trauma, Cranial Damage & Neurological Conditions</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Treatment 3 -->
+                <!-- <div class="treatment-card bg-white p-8 rounded-lg shadow-md transition duration-300"> -->
+                    <!-- <div class="text-green-600 mb-4">
+                        <i class="fas fa-heartbeat text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Vascular Health</h3>
+                    <p class="text-gray-600 mb-4">Herbs that improve circulation, reduce plaque buildup, and enhance vascular integrity throughout the body.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Blood flow optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Capillary strengthening</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Blood-brain barrier support</span>
+                        </li>
+                    </ul> -->
+                <!-- </div> -->
+                
+
+
+
+                
+                <!-- Treatment 4 -->
+                <!-- <div class="treatment-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-cloud text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Psychological Conditions</h3>
+                    <p class="text-gray-600 mb-4">Natural solutions for anxiety, depression, PTSD, and other mood disorders that restore emotional balance.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Adaptogenic stress relief</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Neuro-emotional support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Sleep optimization</span>
+                        </li>
+                    </ul>
+                </div> -->
+                
+                <!-- Treatment 5 -->
+                <!-- <div class="treatment-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-dna text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Neurodegenerative Support</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive programs to slow progression and improve quality of life in degenerative conditions.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Mitochondrial support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Oxidative stress reduction</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Inflammation modulation</span>
+                        </li>
+                    </ul>
+                </div> -->
+                
+                <!-- Treatment 6 -->
+                <!-- <div class="treatment-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-user-md text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Personalized Consultations</h3>
+                    <p class="text-gray-600 mb-4">Each treatment plan is customized to your unique neurological profile and health goals.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Comprehensive health assessment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Custom herbal formulations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Lifestyle recommendations</span>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                
+                <div class="md:w-1/2 relative">
+                    <img src="images/gaba.jpg" alt="Dr. Greenleaf" class="rounded-lg shadow-xl w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-green-600 text-white p-4 rounded-lg shadow-lg hidden md:block">
+                        <p class="font-bold">GABA extra</p>
+                        
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 relative">
+                    <img src="images/ginko.jpg" alt="Dr. Greenleaf" class="rounded-lg shadow-xl w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-green-600 text-white p-4 rounded-lg shadow-lg hidden md:block">
+                        <p class="font-bold">Ginkgo +</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Patient Success Stories</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from those who have experienced improvements in their neurological health through our herbal treatments</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-green-600 mr-4">
+                            <i class="fas fa-quote-left text-2xl"></i>
+                        </div>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"After a mild stroke, I couldn’t remember simple things. This combo helped me get my confidence and my memory back.”
+                        </p>
+                    <div class="flex items-center">
+                        <div class="h-12 w-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <!-- <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Patient" class="h-full w-full object-cover"> -->
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Chuks, 52,</h4>
+                            <p class="text-gray-500 text-sm">Lagos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-green-600 mr-4">
+                            <i class="fas fa-quote-left text-2xl"></i>
+                        </div>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">“My daughter with ADHD is finally more calm and focused. No harsh side effects like the meds.”
+                         </p>
+                    <div class="flex items-center">
+                        <div class="h-12 w-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <!-- <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Patient" class="h-full w-full object-cover"> -->
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Mrs. B</h4>
+                            <p class="text-gray-500 text-sm">Abuja</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-green-600 mr-4">
+                            <i class="fas fa-quote-left text-2xl"></i>
+                        </div>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">“My mum was forgetting names, places… now she remembers again, sleeps well, and laughs more.”
+                    </p>
+                    <div class="flex items-center">
+                        <div class="h-12 w-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <!-- <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Patient" class="h-full w-full object-cover"> -->
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ruth</h4>
+                            <p class="text-gray-500 text-sm">Enugu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="images/woman.jpeg" alt="Herbal Medicine" class="rounded-lg shadow-xl w-full herb-animation">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Who This Is For:</h2>
+                    <h5 class="text-2xl  text-gray-400 mb-6">If you or a loved one…</h5>
+                    <!-- <p class="text-gray-600 mb-6">Unlike conventional treatments that often focus on symptom management, our herbal protocols address the underlying causes of neurological dysfunction through multiple pathways:</p> -->
+                    
+
+                    
+
+
+
+
+
+
+
+
+
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-md bg-green-100 text-green-600">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-800">Struggle with memory, focus, or mental fatigue</h3>
+                                <!-- <p class="text-gray-600">Selected botanicals that protect neurons from damage and support cellular repair mechanisms.</p> -->
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-md bg-green-100 text-green-600">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-800">Needs help with stroke, mobility of speech, epilepsy, seizures, tingling sensation,  palpitations</h3>
+                                <!-- <p class="text-gray-600">Herbs that enhance blood flow to the brain, delivering oxygen and nutrients critical for neurological function.</p> -->
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-md bg-green-100 text-green-600">
+                                    <i class="fas fa-fire"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-800">Have a child with Autism or ADHD</h3>
+                                <!-- <p class="text-gray-600">Natural compounds that reduce neuroinflammation, a common factor in many neurological conditions.</p> -->
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-md bg-green-100 text-green-600">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-800">Struggling with BP,  insomnia , acute migraine 
+
+                                    </h3>
+                                <!-- <p class="text-gray-600">Herbs that support the production and regulation of key brain chemicals for optimal neurological communication.</p> -->
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-md bg-green-100 text-green-600">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-800">Having Blood Circulation Disorder / Vascular system issues 
+                                    
+                                   </h3>
+                                <!-- <p class="text-gray-600">Herbs that support the production and regulation of key brain chemicals for optimal neurological communication.</p> -->
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-md bg-green-100 text-green-600">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-800"> Worry about Alzheimer’s or long-term brain decline</h3>
+                                <p class="text-gray-600">These combo is for you. </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">What Makes It Different?</h2>
+                <!-- <p class="text-gray-600 max-w-2xl mx-auto">A powerful neuro-support combo that improves brain circulation, balances the nervous system, boosts memory, and restores mental clarity — naturally</p> -->
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               
+                
+
+
+
+                
+               
+                
+                <!-- Treatment 3 -->
+                <div class="treatment-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-heartbeat text-4xl"></i>
+                    </div>
+                    <!-- <h3 class="text-xl font-bold text-gray-800 mb-3">Vascular Health</h3> -->
+                    <p class="text-gray-600 mb-4">🧠 Dual Approach – Works on both brain chemistry and blood flow</p>
+                    <p class="text-gray-600 mb-4">🌿 100% Herbal & Natural – No side effects </p>
+                    <p class="text-gray-600 mb-4">🇪🇺 Produced & Certified in Europe – Backed by science 🌿 100% Herbal & Natural – No side effects </p>
+                    
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <!-- <i class="fas fa-check text-green-500 mt-1 mr-2"></i> -->
+                            <span>🎁 Order Now and Get These Bonuses FREE:</span>
+                        </li>
+                        <li class="flex items-start">
+                            <!-- <i class="fas fa-check text-green-500 mt-1 mr-2"></i> -->
+                            <span>📘 Neuro Boost Nutrition PDF Guide</span>
+                        </li>
+                        <li class="flex items-start">
+                            <!-- <i class="fas fa-check text-green-500 mt-1 mr-2"></i> -->
+                            <span>📱 Direct Support Line with Our Health Consultant (WhatsApp)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <!-- <i class="fas fa-check text-green-500 mt-1 mr-2"></i> -->
+                            <span>🚚 FREE Nationwide Delivery</span>
+                        </li>
+                        <li class="flex items-start">
+                            <!-- <i class="fas fa-check text-green-500 mt-1 mr-2"></i> -->
+                            <span>💯 100% Natural Brain- Health  Guarantee:</span>
+                        </li>
+
+
+                    </ul>
+                    <p class="text-gray-600 mb-4">Use the combo for 2 weeks 
+                        feel more focused, Zero Anxiety, Normalized BP  and mentally sharper </p>
+                </div>
+                
+                <!-- Treatment 4 -->
+                <div class="treatment-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-cloud text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">GABA Extra
+                        And
+                        GINKGO+</h3>
+                    <p class="text-gray-600 mb-4">are Europe Certified Natural Brain Health Products for :</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Maintain Healthy Brain</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Preventive</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Treatment of brain originated sickness and diseases.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="text-gray-600 mb-4">For Treatment or Preventive ? <br>
+                    European produced / Certified Brain Health Products:
+                    <br><br>
+                    Dr. DEE'S GABA EXTRA
+                    & 
+                    Dr. DEE'S GINKGO+ <br><br>
+                    Are  Your #1 choice </p>
+                
+                
+ 
+                    📦 Click this WhasAPP number <a href="https://wa.me/message/7ODTHIGMWN3RP1" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">+234-8033731636</a> to book your order now.
+  
+                
+                <!-- Treatment 5 -->
+                <div class="treatment-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-dna text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">📦 Choose Your Pack Below</h3>
+                    <p class="text-gray-600 mb-4">1 bottle Dr. DEE'S GABA EXTRA by 30 Capsules bottle 40k</p>
+                    <p class="text-gray-600 mb-4">1 bottle Dr. DEE'S GINKGO+  by 30 Capsules bottle 40k</p>
+                    <p class="text-gray-600 mb-4">Buy Combo of 1 bottle of GABA & GINKGO  80k</p>
+                    <br><br>
+                    <p class="text-gray-600 mb-4">Buy 2 weeks combo of 2 bottles each 160k</p>
+                    <p class="text-gray-600 mb-4">Buy 1 month combo of 4 bottles each 300k</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-car text-green-500 mt-1 mr-2"></i>
+                            <span>WE DELIVER NATIONWIDE.
+                <br>
+                                PAYMENT AFTER DELIVERY 
+                                <br>
+                                📍 We Deliver to Your Door — FAST & DISCREET.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <!-- <i class="fas fa-check text-green-500 mt-1 mr-2"></i> -->
+                            <span>👉 Best European Brain Health Products 
+                
+                                Trusted Globally 
+                                 All Natural</span>
+                        </li>
+                       
+                    </ul>
+                </div>
+                               
+
+                
+                
+                
+                
+
+                <!-- Treatment 6 -->
+                <!-- <div class="treatment-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-user-md text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Personalized Consultations</h3>
+                    <p class="text-gray-600 mb-4">Each treatment plan is customized to your unique neurological profile and health goals.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Comprehensive health assessment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Custom herbal formulations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Lifestyle recommendations</span>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+   <p> 📦 Click this WhasAPP number <a href="https://wa.me/message/7ODTHIGMWN3RP1" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">+234-8033731636</a> to book your order now. </p>
+
+     <!-- Footer -->
+     <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    
+                    <div class="flex items-center space-x-2    logo">
+                
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <p class="max-w-xs">Bringing the healing power of nature to your doorstep with premium products.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="hover:text-green-400 transition">Home</a></li>
+                            <li><a href="#products" class="hover:text-green-400 transition">Products</a></li>
+                            <!-- <li><a href="#about" class="hover:text-green-400 transition">About Us</a></li>
+                            <li><a href="#contact" class="hover:text-green-400 transition">Contact</a></li> -->
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <!-- <h4 class="text-white font-bold mb-4">Products</h4> -->
+                        <ul class="space-y-2">
+                            <!-- <li><a href="#" class="hover:text-green-400 transition">Herbal Teas</a></li>
+                            <li><a href="#" class="hover:text-green-400 transition">Tinctures</a></li>
+                            <li><a href="#" class="hover:text-green-400 transition">Capsules</a></li>
+                            <li><a href="#" class="hover:text-green-400 transition">Essential Oils</a></li> -->
+                        </ul>
+                    </div>
+                    
+                    <!-- <div>
+                        <h4 class="text-white font-bold mb-4">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 transition">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2025 Dr. DEE. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <!-- <a href="#" class="hover:text-green-400 transition mr-4">Privacy Policy</a>
+                    <a href="#" class="hover:text-green-400 transition">Terms of Service</a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    
+</body>
+</html>
